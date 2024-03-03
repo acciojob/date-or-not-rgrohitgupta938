@@ -3,7 +3,7 @@ var isDate = function (input) {
 	if( input instanceof Date && !isNaN(input)) return true;
 	if(typeof input ==="string"){
 		const newDate = new Date(input);
-		if(!isNaN(newDate)) return true
+		if(!isNaN(newDate)&&newDate != "Invalid Date") return true
 	}
 	return false;
 };
