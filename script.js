@@ -1,14 +1,5 @@
 var isDate = function (input) {
-    if (input instanceof Date && !isNaN(input)) {
-        return true;
-    }
-    if (typeof input === "string") {
-        const newDate = new Date(input);
-        if (!isNaN(newDate) && newDate.toString() !== "Invalid Date") {
-            return true;
-        }
-    }
-    return false;
+   return !isNaN(Date.parse(input));
 };
 
 // Do not change the code below.
